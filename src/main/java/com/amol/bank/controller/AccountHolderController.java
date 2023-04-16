@@ -17,7 +17,7 @@ public class AccountHolderController {
 	AccountHolderService accountHolderService;
 	
 	@PostMapping("/addAccountHolder")
-	private AccountHolder addAccountHolder(@RequestBody AccountHolder accountHolder) {
+	private AccountHolder addAccountHolder(@RequestBody AccountHolder accountHolder) throws Exception {
 		return accountHolderService.saveAccountHolder(accountHolder);
 	}
 	

@@ -8,5 +8,7 @@ public class ApnaBankApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ApnaBankApplication.class, args);
+		
+		
 	}
 }

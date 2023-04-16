@@ -1,6 +1,7 @@
 package com.amol.bank.entity;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -12,6 +13,7 @@ import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.SQLDeleteAll;
@@ -35,7 +37,11 @@ public class AccountHolder {
 	private String firstName;
 	private String lastName;
 	private String email;
+	
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	private LocalDate dob;
+	
+//	DateTimeFormatter dob = DateTimeFormatter.ofPattern("dd-mm-yyyy");
 	private long phoneNumber;
 	private String password;
 	
